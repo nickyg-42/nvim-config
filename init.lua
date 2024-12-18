@@ -15,3 +15,7 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>Telescope oldfiles<CR>', { noremap =
 -- ~/.config/nvim/init.lua or keymap.lua
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
+vim.api.nvim_create_autocmd("VimLeave", {
+    pattern = "*",
+    command = "set guicursor=a:ver25-blinkon1",
+})
