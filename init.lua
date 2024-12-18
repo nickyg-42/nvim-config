@@ -1,7 +1,7 @@
 require("config.lazy")
 
 -- Map 'Ctrl-p' for finding files
-vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-o>', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
 
 -- Map 'Ctrl-f' for live grep (search text in files)
 vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
