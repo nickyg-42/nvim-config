@@ -21,3 +21,15 @@ vim.api.nvim_create_autocmd("VimLeave", {
 })
 
 vim.opt.number = true
+
+vim.cmd([[
+    augroup TransparentBackground
+        autocmd!
+        autocmd ColorScheme * highlight Normal ctermbg=none guibg=none
+        autocmd ColorScheme * highlight NonText ctermbg=none guibg=none
+    augroup END
+
+    " Apply transparency immediately
+    highlight Normal ctermbg=none guibg=none
+    highlight NonText ctermbg=none guibg=none
+]])
